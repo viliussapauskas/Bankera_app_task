@@ -4,6 +4,7 @@ export {
     currenciesActionCreators,
     currenciesSlice,
     getCurrenciesStateSelector,
+    getCurrencyByNameSelector,
     loadCurrenciesAsync,
 } from './currenciesSlice'
 export { initialState } from './state'

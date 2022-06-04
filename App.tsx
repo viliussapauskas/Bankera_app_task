@@ -1,25 +1,34 @@
-import { StatusBar } from 'expo-status-bar'
 import { Provider } from 'react-redux'
-import { StyleSheet, View } from 'react-native'
 import { store } from './src/redux/store'
-import { HomeScreen } from './src/react/homeScreen/homeScreen'
+import { WalletScreen } from './src/react/walletScreen/walletScreen'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { CurrencyScreen } from './src/react/currencyScreen'
+
+const Stack = createNativeStackNavigator()
 
 export default function App() {
     return (
         <Provider store={store}>
-            <View style={styles.container}>
-                <HomeScreen />
-                <StatusBar style="auto" />
-            </View>
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen
+                        name="Wallet"
+                        component={WalletScreen}
+                        options={{ title: 'Your wallet' }}
+                    />
+                    <Stack.Screen
+                        // options={({ route }) => ({
+                        //     title: route?.params?.name ?? '',
+                        // })}
+                        options={{
+                            title: '',
+                        }}
+                        name="Currency"
+                        component={CurrencyScreen}
+                    />
+                </Stack.Navigator>
+            </NavigationContainer>
         </Provider>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-})
