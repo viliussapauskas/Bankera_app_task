@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import { View, Text } from 'react-native'
 import { getCurrencyByNameSelector } from '../../redux/currencies'
 import { useAppSelector } from '../../redux/hooks'
+import { Layout } from '../components'
 
 export interface CurrencyScreenProps {
     route: {
@@ -17,10 +18,12 @@ export const CurrencyScreen: FC<CurrencyScreenProps> = ({ route }) => {
     )
 
     return (
-        <View>
-            <Text>
-                {route?.params?.name} --- {currency?.value}
-            </Text>
-        </View>
+        <Layout>
+            <View>
+                <Text>
+                    {route?.params?.name} --- {currency?.value}
+                </Text>
+            </View>
+        </Layout>
     )
 }

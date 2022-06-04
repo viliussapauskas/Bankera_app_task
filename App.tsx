@@ -4,6 +4,7 @@ import { WalletScreen } from './src/react/walletScreen/walletScreen'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { CurrencyScreen } from './src/react/currencyScreen'
+import { Layout } from './src/react/components'
 
 const Stack = createNativeStackNavigator()
 

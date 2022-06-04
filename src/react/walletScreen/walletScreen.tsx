@@ -1,13 +1,15 @@
-import { StatusBar } from 'expo-status-bar'
-import { FC, useEffect } from 'react'
+import React, { FC, useEffect } from 'react'
 
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { View } from 'react-native'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import {
     getCurrenciesStateSelector,
     loadCurrenciesAsync,
 } from '../../redux/currencies'
 import { NavigationProp } from '@react-navigation/native'
+import { Layout, Spinner } from '../components'
+import { CurrencyRow } from './components'
+import { Divider } from 'react-native-paper'
 
 export interface WalletScreenProps {
     navigation: NavigationProp<any, any>
@@ -22,35 +24,25 @@ export const WalletScreen: FC<WalletScreenProps> = ({ navigation }) => {
     }, [])
 
     return (
-        <View style={styles.container}>
-            <Text>{status}</Text>
-            {!value && <Text>Loading...</Text>}
-            {value && status == 'idle' && (
-                <View>
-                    {value.map((x) => (
-                        <View>
-                            <Button
-                                title={`${x.name} - ${x.value}`}
-                                onPress={() =>
+        <Layout>
+            <View>
+                {status && status === 'loading' && <Spinner />}
+                {value && status == 'idle' && (
+                    <View>
+                        {value.map((currency) => (
+                            <CurrencyRow
+                                currency={currency}
+                                onClick={() =>
                                     navigation.navigate('Currency', {
-                                        name: x.name,
+                                        name: currency.name,
                                     })
                                 }
-                            ></Button>
-                        </View>
-                    ))}
-                </View>
-            )}
-            <StatusBar style="auto" />
-        </View>
+                            />
+                        ))}
+                        <Divider />
+                    </View>
+                )}
+            </View>
+        </Layout>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-})
