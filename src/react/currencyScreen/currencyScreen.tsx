@@ -34,7 +34,7 @@ export const CurrencyScreen: FC<CurrencyScreenProps> = ({ route }) => {
     return (
         <Layout>
             <View style={styles.container}>
-                <Title style={styles.title}>Bitcoin</Title>
+                <Title style={styles.title}>{currency?.name}</Title>
                 <Caption>
                     * Enter ammount of selected currency to see your return in
                     USD
