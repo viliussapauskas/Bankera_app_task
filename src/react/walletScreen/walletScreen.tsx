@@ -10,6 +10,7 @@ import { NavigationProp } from '@react-navigation/native'
 import { Layout, Spinner } from '../components'
 import { CurrencyRow } from './components'
 import { Divider } from 'react-native-paper'
+import { styles } from './styles'
 
 export interface WalletScreenProps {
     navigation: NavigationProp<any, any>
@@ -25,12 +26,13 @@ export const WalletScreen: FC<WalletScreenProps> = ({ navigation }) => {
 
     return (
         <Layout>
-            <View>
+            <View style={styles.container}>
                 {status && status === 'loading' && <Spinner />}
                 {value && status == 'idle' && (
                     <View>
                         {value.map((currency) => (
                             <CurrencyRow
+                                key={currency.id}
                                 currency={currency}
                                 onClick={() =>
                                     navigation.navigate('Currency', {

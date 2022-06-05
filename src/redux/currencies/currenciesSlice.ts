@@ -2,8 +2,9 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { RootState } from '../store'
 import { fetchCurrencies } from './currenciesAPI'
 import { initialState } from './state'
+import { Currency } from './types'
 
-export const loadCurrenciesAsync = createAsyncThunk(
+export const loadCurrenciesAsync = createAsyncThunk<Currency[]>(
     'currencies/fetchCurrencies',
     async () => await fetchCurrencies()
 )
@@ -15,7 +16,7 @@ export const currenciesSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(loadCurrenciesAsync.pending, (state) => {
-                state.status = 'loading'
+                state.status = state.value !== undefined ? 'idle' : 'loading'
             })
             .addCase(loadCurrenciesAsync.fulfilled, (state, action) => {
                 state.status = 'idle'
