@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { View } from 'react-native'
+import { Keyboard, TouchableWithoutFeedback, View } from 'react-native'
 import { styles } from './styles'
 
 interface LayoutProps {
@@ -7,5 +7,9 @@ interface LayoutProps {
 }
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
-    return <View style={styles.container}>{children}</View>
+    return (
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+            <View style={styles.container}>{children}</View>
+        </TouchableWithoutFeedback>
+    )
 }
