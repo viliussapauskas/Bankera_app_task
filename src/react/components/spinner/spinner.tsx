@@ -5,6 +5,7 @@ import { STYLE_VARIABLES } from '../../constants'
 export const Spinner: FC = () => {
     return (
         <ActivityIndicator
+            testID="spinner"
             size={'large'}
             color={STYLE_VARIABLES.primaryColor}
         />

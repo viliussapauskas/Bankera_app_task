@@ -1,10 +1,9 @@
-import * as renderer from 'react-test-renderer'
 import { Spinner } from './spinner'
+import { render } from '@testing-library/react-native'
 
 describe('Spinner test', () => {
-    jest.useFakeTimers()
     it('Should render spinner component', () => {
-        const component = renderer.create(<Spinner />).toJSON()
-        expect(component).toMatchSnapshot()
+        const { getByTestId } = render(<Spinner />)
+        expect(getByTestId('spinner')).toBeDefined()
     })
 })
