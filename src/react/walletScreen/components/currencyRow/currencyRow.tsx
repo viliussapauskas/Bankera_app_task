@@ -10,9 +10,10 @@ interface CurrencyRowProps {
 
 export const CurrencyRow: FC<CurrencyRowProps> = ({ onClick, currency }) => {
     return (
-        <View>
+        <View testID="currencyRow">
             <Divider />
             <List.Item
+                testID="currencyRow.ListItem"
                 title={`${currency.name} - ${currency.value}`}
                 onPress={onClick}
                 // style={{ backgroundColor: 'red', margin: '10px' }}
