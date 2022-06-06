@@ -26,10 +26,10 @@ export const WalletScreen: FC<WalletScreenProps> = ({ navigation }) => {
 
     return (
         <Layout>
-            <View style={styles.container}>
+            <View style={styles.container} testID="walletScreen">
                 {status && status === 'loading' && <Spinner />}
                 {value && status == 'idle' && (
-                    <View>
+                    <View testID="walletScreen.currenciesContainer">
                         {value.map((currency) => (
                             <CurrencyRow
                                 key={currency.id}
