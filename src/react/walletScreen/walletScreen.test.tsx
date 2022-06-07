@@ -83,7 +83,7 @@ describe('WalletScreen component tests', () => {
         const { getByTestId } = getComponent(props)
         const listItem = getByTestId('currencyRow.ListItem')
         fireEvent.press(listItem)
-        expect(navigateMock).toBeCalledWith('Currency', { name: 'BitCoin' })
+        expect(navigateMock).toBeCalledWith('Currency', { id: 'BTC' })
     })
 
     it('Should call dispatch on initial load', () => {

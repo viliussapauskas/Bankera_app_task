@@ -12,7 +12,7 @@ describe('CurrencyScreen component tests', () => {
         return {
             route: {
                 params: {
-                    name: 'BitCoin',
+                    id: 'BTC',
                 },
             },
         }

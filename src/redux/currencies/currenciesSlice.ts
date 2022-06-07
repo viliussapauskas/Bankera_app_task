@@ -33,5 +33,5 @@ export const currenciesReducer = reducer
 export const currenciesActionCreators = actions
 
 export const getCurrenciesStateSelector = (state: RootState) => state.currencies
-export const getCurrencyByNameSelector = (name: string) => (state: RootState) =>
-    state.currencies.value?.find((x) => x.name === name) ?? undefined
+export const getCurrencyByIdSelector = (id: string) => (state: RootState) =>
+    state.currencies.value?.find((x) => x.id === id) ?? undefined

@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import { View } from 'react-native'
 import { TextInput, Title, Caption, Headline } from 'react-native-paper'
-import { getCurrencyByNameSelector } from '../../redux/currencies'
+import { getCurrencyByIdSelector } from '../../redux/currencies'
 import { useAppSelector } from '../../redux/hooks'
 import { Layout } from '../components'
 import { styles } from './styles'
@@ -10,23 +10,19 @@ import { currencyToUSD } from './utils'
 export interface CurrencyScreenProps {
     route: {
         params: {
-            name: string
+            id: string
         }
     }
 }
 
 export const CurrencyScreen: FC<CurrencyScreenProps> = ({ route }) => {
-    const currency = useAppSelector(
-        //TODO: is it by name
-        getCurrencyByNameSelector(route?.params?.name)
-    )
+    const currency = useAppSelector(getCurrencyByIdSelector(route?.params?.id))
 
     const [ammountOfCurreny, setAmmountOfCurreny] = useState<string>()
 
     const returnValue = currencyToUSD(
         ammountOfCurreny ?? '',
-        //TODO: currency?.value ?? 0
-        currency?.value!
+        currency?.value ?? 0
     )
 
     const onChangeText = (value: string) => {

@@ -40,7 +40,7 @@ export const WalletScreen: FC<WalletScreenProps> = ({ navigation }) => {
             currency={currency.item}
             onClick={() =>
                 navigation.navigate('Currency', {
-                    name: currency.item.name,
+                    id: currency.item.id,
                 })
             }
         />
