@@ -24,7 +24,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
     }, [])
 
     return (
-        <SafeAreaView style={styles.safeAreaContainer}>
+        <SafeAreaView style={styles.safeAreaContainer} testID="layout">
             <TouchableWithoutFeedback
                 onPress={Keyboard.dismiss}
                 accessible={false}
