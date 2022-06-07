@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux'
 import { store } from './src/redux/store'
-import { Navigator } from './src/react/components'
+import { Navigator } from './src/react/components/navigator'
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper'
 import { LogBox } from 'react-native'
 import { useEffect } from 'react'
@@ -9,8 +9,7 @@ const theme = {
     ...DefaultTheme,
     colors: {
         ...DefaultTheme.colors,
-        primary: 'tomato',
-        accent: 'yellow',
+        primary: '#f4511e',
     },
 }
 

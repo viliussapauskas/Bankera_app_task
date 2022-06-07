@@ -1,7 +1,7 @@
 export interface Currency {
-    id: string // currencyFrom
-    name: string // currencyFrom
-    value: number // last
+    id: string
+    name: string
+    value: number
 }
 
 export interface CurrenciesState {

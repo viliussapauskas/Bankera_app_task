@@ -5,6 +5,7 @@ import {
     RefreshControl,
     View,
 } from 'react-native'
+import { Divider, Title } from 'react-native-paper'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import {
     Currency,
@@ -12,9 +13,9 @@ import {
     loadCurrenciesAsync,
 } from '../../redux/currencies'
 import { NavigationProp } from '@react-navigation/native'
-import { Layout, Spinner } from '../components'
+import { Layout } from '../components/layout'
+import { Spinner } from '../components/spinner'
 import { CurrencyRow } from './components'
-import { Divider } from 'react-native-paper'
 import { styles } from './styles'
 
 export interface WalletScreenProps {
@@ -51,6 +52,7 @@ export const WalletScreen: FC<WalletScreenProps> = ({ navigation }) => {
     return (
         <Layout>
             <View style={styles.container} testID="walletScreen">
+                {status === 'failed' && <Title>Error occured</Title>}
                 {status && status === 'loading' && <Spinner />}
                 {value && status == 'idle' && (
                     <View

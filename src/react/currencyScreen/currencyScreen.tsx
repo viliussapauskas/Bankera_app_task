@@ -1,9 +1,9 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import { View } from 'react-native'
 import { TextInput, Title, Caption, Headline } from 'react-native-paper'
 import { getCurrencyByIdSelector } from '../../redux/currencies'
 import { useAppSelector } from '../../redux/hooks'
-import { Layout } from '../components'
+import { Layout } from '../components//layout'
 import { styles } from './styles'
 import { currencyToUSD } from './utils'
 
