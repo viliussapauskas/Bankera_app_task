@@ -17,12 +17,17 @@ export interface CurrencyScreenProps {
 
 export const CurrencyScreen: FC<CurrencyScreenProps> = ({ route }) => {
     const currency = useAppSelector(
+        //TODO: is it by name
         getCurrencyByNameSelector(route?.params?.name)
     )
 
     const [ammountOfCurreny, setAmmountOfCurreny] = useState<string>()
 
-    const returnValue = currencyToUSD(ammountOfCurreny ?? '', currency?.value!)
+    const returnValue = currencyToUSD(
+        ammountOfCurreny ?? '',
+        //TODO: currency?.value ?? 0
+        currency?.value!
+    )
 
     const onChangeText = (value: string) => {
         const isNumberOrEmpty = !isNaN(parseFloat(value)) || value === ''
@@ -33,13 +38,16 @@ export const CurrencyScreen: FC<CurrencyScreenProps> = ({ route }) => {
 
     return (
         <Layout>
-            <View style={styles.container}>
-                <Title style={styles.title}>{currency?.name}</Title>
+            <View style={styles.container} testID="currencyScreen">
+                <Title style={styles.title} testID="currencyScreen.title">
+                    {currency?.name}
+                </Title>
                 <Caption>
                     * Enter ammount of selected currency to see your return in
                     USD
                 </Caption>
                 <TextInput
+                    testID="currencyScreen.ammountInput"
                     placeholder="1"
                     label={currency?.name}
                     value={ammountOfCurreny}
@@ -48,7 +56,10 @@ export const CurrencyScreen: FC<CurrencyScreenProps> = ({ route }) => {
                 />
 
                 {!!returnValue && !isNaN(returnValue) && (
-                    <View style={styles.returnValue}>
+                    <View
+                        testID="currencyScreen.returnCard"
+                        style={styles.returnValue}
+                    >
                         <Title>Your return in USD</Title>
                         <Headline>{returnValue}$</Headline>
                     </View>

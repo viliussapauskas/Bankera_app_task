@@ -1,0 +1,517 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WalletScreen component tests Should render CurrencyScreen component 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    accessible={false}
+    contentContainerStyle={
+      Object {
+        "flex": 1,
+        "padding": 20,
+      }
+    }
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    refreshControl={
+      <RefreshControlMock
+        onRefresh={[Function]}
+        refreshing={false}
+      />
+    }
+  >
+    <RCTRefreshControl />
+    <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        testID="currencyScreen"
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000000",
+                "fontFamily": "System",
+                "fontWeight": "400",
+              },
+              Object {
+                "textAlign": "left",
+              },
+              Array [
+                Object {
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "rgba(0, 0, 0, 0.87)",
+                  "fontFamily": "System",
+                  "fontWeight": "500",
+                  "writingDirection": "ltr",
+                },
+                Array [
+                  Object {
+                    "fontSize": 20,
+                    "letterSpacing": 0.15,
+                    "lineHeight": 30,
+                    "marginVertical": 2,
+                  },
+                  Object {
+                    "textAlign": "center",
+                  },
+                ],
+              ],
+            ]
+          }
+          testID="currencyScreen.title"
+        />
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000000",
+                "fontFamily": "System",
+                "fontWeight": "400",
+              },
+              Object {
+                "textAlign": "left",
+              },
+              Array [
+                Object {
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "rgba(0, 0, 0, 0.54)",
+                  "fontFamily": "System",
+                  "fontWeight": "400",
+                  "writingDirection": "ltr",
+                },
+                Array [
+                  Object {
+                    "fontSize": 12,
+                    "letterSpacing": 0.4,
+                    "lineHeight": 20,
+                    "marginVertical": 2,
+                  },
+                  undefined,
+                ],
+              ],
+            ]
+          }
+        >
+          * Enter ammount of selected currency to see your return in USD
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgb(231, 231, 231)",
+                "borderTopLeftRadius": 4,
+                "borderTopRightRadius": 4,
+              },
+              Object {},
+            ]
+          }
+        >
+          <View
+            collapsable={false}
+            style={
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.26)",
+                "bottom": 0,
+                "height": 2,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "transform": Array [
+                  Object {
+                    "scaleY": 0.5,
+                  },
+                ],
+                "zIndex": 1,
+              }
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingBottom": 0,
+                  "paddingTop": 0,
+                },
+                Object {
+                  "minHeight": 64,
+                },
+              ]
+            }
+          >
+            <TextInput
+              editable={true}
+              keyboardType="numeric"
+              maxFontSizeMultiplier={1.5}
+              multiline={false}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              placeholder="1"
+              placeholderTextColor="rgba(0, 0, 0, 0.54)"
+              selectionColor="#6200ee"
+              style={
+                Array [
+                  Object {
+                    "flexGrow": 1,
+                    "margin": 0,
+                  },
+                  Object {
+                    "paddingLeft": 12,
+                    "paddingRight": 12,
+                  },
+                  Object {
+                    "height": 64,
+                  },
+                  Object {
+                    "paddingBottom": 0,
+                    "paddingTop": 0,
+                  },
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                    "fontWeight": undefined,
+                    "textAlign": "left",
+                    "textAlignVertical": "center",
+                  },
+                  false,
+                  Array [
+                    Object {},
+                  ],
+                ]
+              }
+              testID="currencyScreen.ammountInput"
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;
+
+exports[`WalletScreen component tests Should render correct title 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    accessible={false}
+    contentContainerStyle={
+      Object {
+        "flex": 1,
+        "padding": 20,
+      }
+    }
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    refreshControl={
+      <RefreshControlMock
+        onRefresh={[Function]}
+        refreshing={false}
+      />
+    }
+  >
+    <RCTRefreshControl />
+    <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        testID="currencyScreen"
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000000",
+                "fontFamily": "System",
+                "fontWeight": "400",
+              },
+              Object {
+                "textAlign": "left",
+              },
+              Array [
+                Object {
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "rgba(0, 0, 0, 0.87)",
+                  "fontFamily": "System",
+                  "fontWeight": "500",
+                  "writingDirection": "ltr",
+                },
+                Array [
+                  Object {
+                    "fontSize": 20,
+                    "letterSpacing": 0.15,
+                    "lineHeight": 30,
+                    "marginVertical": 2,
+                  },
+                  Object {
+                    "textAlign": "center",
+                  },
+                ],
+              ],
+            ]
+          }
+          testID="currencyScreen.title"
+        >
+          BitCoin title input
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000000",
+                "fontFamily": "System",
+                "fontWeight": "400",
+              },
+              Object {
+                "textAlign": "left",
+              },
+              Array [
+                Object {
+                  "textAlign": "left",
+                },
+                Object {
+                  "color": "rgba(0, 0, 0, 0.54)",
+                  "fontFamily": "System",
+                  "fontWeight": "400",
+                  "writingDirection": "ltr",
+                },
+                Array [
+                  Object {
+                    "fontSize": 12,
+                    "letterSpacing": 0.4,
+                    "lineHeight": 20,
+                    "marginVertical": 2,
+                  },
+                  undefined,
+                ],
+              ],
+            ]
+          }
+        >
+          * Enter ammount of selected currency to see your return in USD
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgb(231, 231, 231)",
+                "borderTopLeftRadius": 4,
+                "borderTopRightRadius": 4,
+              },
+              Object {},
+            ]
+          }
+        >
+          <View
+            collapsable={false}
+            style={
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0.26)",
+                "bottom": 0,
+                "height": 2,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "transform": Array [
+                  Object {
+                    "scaleY": 0.5,
+                  },
+                ],
+                "zIndex": 1,
+              }
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "paddingBottom": 0,
+                  "paddingTop": 0,
+                },
+                Object {
+                  "minHeight": 64,
+                },
+              ]
+            }
+          >
+            <View
+              collapsable={false}
+              pointerEvents="none"
+              style={
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "transform": Array [
+                    Object {
+                      "translateX": 0,
+                    },
+                  ],
+                  "zIndex": 3,
+                }
+              }
+            >
+              <Text
+                collapsable={false}
+                maxFontSizeMultiplier={1.5}
+                numberOfLines={1}
+                onLayout={[Function]}
+                style={
+                  Object {
+                    "color": "#6200ee",
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                    "fontWeight": undefined,
+                    "left": 0,
+                    "opacity": 0,
+                    "paddingLeft": 12,
+                    "paddingRight": 12,
+                    "position": "absolute",
+                    "textAlign": "left",
+                    "top": 34,
+                    "transform": Array [
+                      Object {
+                        "translateX": 0,
+                      },
+                      Object {
+                        "translateY": 0,
+                      },
+                      Object {
+                        "scale": 1,
+                      },
+                    ],
+                    "writingDirection": "ltr",
+                  }
+                }
+              >
+                BitCoin title input
+              </Text>
+              <Text
+                collapsable={false}
+                maxFontSizeMultiplier={1.5}
+                numberOfLines={1}
+                style={
+                  Object {
+                    "color": "rgba(0, 0, 0, 0.54)",
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                    "fontWeight": undefined,
+                    "left": 0,
+                    "opacity": 0,
+                    "paddingLeft": 12,
+                    "paddingRight": 12,
+                    "position": "absolute",
+                    "textAlign": "left",
+                    "top": 34,
+                    "transform": Array [
+                      Object {
+                        "translateX": 0,
+                      },
+                      Object {
+                        "translateY": 0,
+                      },
+                      Object {
+                        "scale": 1,
+                      },
+                    ],
+                    "writingDirection": "ltr",
+                  }
+                }
+              >
+                BitCoin title input
+              </Text>
+            </View>
+            <TextInput
+              editable={true}
+              keyboardType="numeric"
+              maxFontSizeMultiplier={1.5}
+              multiline={false}
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              placeholder=""
+              placeholderTextColor="rgba(0, 0, 0, 0.54)"
+              selectionColor="#6200ee"
+              style={
+                Array [
+                  Object {
+                    "flexGrow": 1,
+                    "margin": 0,
+                  },
+                  Object {
+                    "paddingLeft": 12,
+                    "paddingRight": 12,
+                  },
+                  Object {
+                    "height": 64,
+                  },
+                  Object {
+                    "paddingBottom": 4,
+                    "paddingTop": 24,
+                  },
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                    "fontWeight": undefined,
+                    "textAlign": "left",
+                    "textAlignVertical": "center",
+                  },
+                  false,
+                  Array [
+                    Object {},
+                  ],
+                ]
+              }
+              testID="currencyScreen.ammountInput"
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;
