@@ -17,8 +17,7 @@ export interface CurrencyScreenProps {
 
 export const CurrencyScreen: FC<CurrencyScreenProps> = ({ route }) => {
     const currency = useAppSelector(getCurrencyByIdSelector(route?.params?.id))
-
-    const [ammountOfCurreny, setAmmountOfCurreny] = useState<string>()
+    const [ammountOfCurreny, setAmmountOfCurreny] = React.useState<string>()
 
     const returnValue = currencyToUSD(
         ammountOfCurreny ?? '',

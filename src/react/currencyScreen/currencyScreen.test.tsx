@@ -1,9 +1,10 @@
-import { CurrencyScreen } from './currencyScreen'
-import { render } from '@testing-library/react-native'
+import React from 'react'
 import { Provider } from 'react-redux'
-import { Currency } from '../../redux/currencies'
+import { render } from '@testing-library/react-native'
 import * as hooks from '../../redux/hooks'
+import { Currency } from '../../redux/currencies'
 import { store } from '../../redux/store'
+import { CurrencyScreen } from './currencyScreen'
 
 describe('CurrencyScreen component tests', () => {
     type Props = React.ComponentProps<typeof CurrencyScreen>
@@ -41,7 +42,25 @@ describe('CurrencyScreen component tests', () => {
                 value: 0.5,
             } as Currency
         })
+
         const component = getComponent()
         expect(component.toJSON()).toMatchSnapshot()
+    })
+
+    it('Should render CurrencyScreen component with return value card', () => {
+        jest.spyOn(hooks, 'useAppSelector').mockImplementation(() => {
+            return {
+                id: 'BTC',
+                name: 'BitCoin title input',
+                value: 0.5,
+            } as Currency
+        })
+
+        const initialReturnValueState = '0.5'
+        React.useState = jest
+            .fn()
+            .mockReturnValue([initialReturnValueState, {}])
+        const { getByTestId } = getComponent()
+        expect(getByTestId('currencyScreen.returnCard')).toBeDefined()
     })
 })
