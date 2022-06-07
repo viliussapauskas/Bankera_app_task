@@ -207,7 +207,7 @@ exports[`Navigator component tests Should render Navigator component 1`] = `
                                 collapsable={false}
                                 style={
                                   Object {
-                                    "borderColor": "red",
+                                    "borderColor": "#f4511e",
                                     "borderRadius": 24,
                                     "borderWidth": 4.8,
                                     "height": 48,
@@ -290,7 +290,7 @@ exports[`Navigator component tests Should render Navigator component 1`] = `
                                 collapsable={false}
                                 style={
                                   Object {
-                                    "borderColor": "red",
+                                    "borderColor": "#f4511e",
                                     "borderRadius": 24,
                                     "borderWidth": 4.8,
                                     "height": 48,
